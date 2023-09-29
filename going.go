@@ -73,4 +73,5 @@ func main() {
   fmt.Println(generator.Intn(100))
   fmt.Println(generator.Intn(100))
   
+  fmt.Println(7 * 5 / 3);
 }
