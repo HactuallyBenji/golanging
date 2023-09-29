@@ -8,6 +8,8 @@ package main
 import (
   "fmt"
   "strconv"
+  "math/rand"
+  "time"
 );
 
 func main() {
@@ -58,4 +60,17 @@ func main() {
   fmt.Println("10.05: ", float32(a) + float32(d))
   fmt.Println("1: ", float32(b) * float32(d))
   fmt.Println("300: ", float32(c) / float32(d))
+
+
+  var mask uint16 = 0xffff;
+  var value uint16 = 38;
+  fmt.Printf("%08b", mask & value)
+
+  fmt.Println("\n---- Randomness ----")
+  ns := rand.NewSource(time.Now().UnixNano())
+  generator := rand.New(ns)
+
+  fmt.Println(generator.Intn(100))
+  fmt.Println(generator.Intn(100))
+  
 }
