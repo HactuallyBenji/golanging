@@ -42,5 +42,20 @@ func main() {
 
   firstInt, _ = strconv.Atoi(firstNumber);
   secondInt, _ = strconv.Atoi(secondNumber);
+  fmt.Println(firstInt)
+  fmt.Println(secondInt)
   fmt.Println(firstInt + secondInt); 
+
+  fmt.Println("\n---- Types ----");
+  var a int = 10;
+  var b int32 = 20;
+  var c byte = 15;
+  var d float32 = 0.05
+
+  fmt.Println("30: ", int(a) + int(b))
+  fmt.Println("35: ", int32(b) + int32(c))
+  fmt.Println("25: ", int(a) + int(c))
+  fmt.Println("10.05: ", float32(a) + float32(d))
+  fmt.Println("1: ", float32(b) * float32(d))
+  fmt.Println("300: ", float32(c) / float32(d))
 }
