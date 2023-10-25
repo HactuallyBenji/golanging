@@ -114,6 +114,26 @@ func getNegativeValues(array []int) ([]int, error) {
   return negativeValues, nil
 }
 
+func findLongestSortedSubsequence(array []int) ([]int, error) {
+  
+  if len(array) == 0 {
+    return make([]int, 0), errors.New("Empty array has no subsequence")
+  }
+
+  if len(array) == 1 {
+    return array, nil
+  }
+
+  var longestIncreasingSubsequence []int
+  var longentDecreasingSubsequence []int
+
+  previousValue := array[0]
+
+  for i := 0; i < len(array); i++ {
+    
+  }
+}
+
 func main() {
   ns := rand.NewSource(time.Now().UnixNano())
   generator := rand.New(ns)
