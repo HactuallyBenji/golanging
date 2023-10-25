@@ -97,6 +97,23 @@ func getPositiveValues(array []int) ([]int, error) {
   return positiveValues, nil
 }
 
+func getNegativeValues(array []int) ([]int, error) {
+  
+  if len(array) == 0 {
+    return make([]int, 0), errors.New("Empty array has no positive values")
+  }
+
+  var negativeValues []int
+
+  for i := 0; i < len(array); i++ {
+    if array[i] < 0 {
+      negativeValues = append(negativeValues, array[i])
+    }
+  }
+
+  return negativeValues, nil
+}
+
 func main() {
   ns := rand.NewSource(time.Now().UnixNano())
   generator := rand.New(ns)
@@ -130,4 +147,7 @@ func main() {
 
   positiveValues, _ := getPositiveValues(randomArray)
   fmt.Println("The positive values in the array are:", positiveValues)
+
+  negativeValues, _ := getNegativeValues(randomArray)
+  fmt.Println("The negative values in the array are:", negativeValues)
  }
