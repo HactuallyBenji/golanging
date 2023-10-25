@@ -104,4 +104,10 @@ func main() {
 
   maxValueIndex, _ := findMaxIndex(randomArray)
   fmt.Println("The maximum value's index in the array is:", maxValueIndex)
+
+  minValue, _ := findMinValue(randomArray)
+  fmt.Println("The minimum value in the array is:", minValue)
+
+  minValueIndex, _ := findMinIndex(randomArray)
+  fmt.Println("The minimum value's index in the array is:", minValueIndex)
  }
