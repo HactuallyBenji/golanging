@@ -8,7 +8,7 @@ import (
   "strconv"
 )
 
-func findMax(array []int) (int, error) {
+func findMaxValue(array []int) (int, error) {
 
   if len(array) == 0 {
     return 0, errors.New("Empty array received. No max value exists") 
