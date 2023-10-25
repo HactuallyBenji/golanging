@@ -80,6 +80,23 @@ func findMinIndex(array []int) (int, error) {
   return minValueIndex, nil
 }
 
+func getPositiveValues(array []int) ([]int, error) {
+  
+  if len(array) == 0 {
+    return make([]int, 0), errors.New("Empty array has no positive values")
+  }
+
+  var positiveValues []int
+
+  for i := 0; i < len(array); i++ {
+    if array[i] > 0 {
+      positiveValues = append(positiveValues, array[i])
+    }
+  }
+
+  return positiveValues, nil
+}
+
 func main() {
   ns := rand.NewSource(time.Now().UnixNano())
   generator := rand.New(ns)
@@ -110,4 +127,7 @@ func main() {
 
   minValueIndex, _ := findMinIndex(randomArray)
   fmt.Println("The minimum value's index in the array is:", minValueIndex)
+
+  positiveValues, _ := getPositiveValues(randomArray)
+  fmt.Println("The positive values in the array are:", positiveValues)
  }
