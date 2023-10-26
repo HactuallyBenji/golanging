@@ -84,7 +84,7 @@ Learn how to create a simple RESTful API using Go. Topics include:
 ## Further Resources
 
 While this repository provides a solid foundation for Go programming, there are always more topics to explore. Here are some additional resources and references to deepen your understanding of Go.
-- [A tour of Go](https://go.dev/tour/welcome/1)
+- [A Tour of Go](https://go.dev/tour/welcome/1)
 - [Golang Github](https://github.com/golang/go)
 
 ---
