@@ -1,6 +1,7 @@
 # Golanging
 
 **Author:** Benjamin Miller
+
 **Date:** 2023-09-28
 
 Welcome to "Golanging", a repository dedicated to exploring the key elements of the Go programming language. This repository serves as a personal learning journey, containing numerous Go programs that provide illustrative examples for key topics in Go. Whether you're just starting out with Go or are looking for a refresher, you'll find valuable insights and code snippets here.
