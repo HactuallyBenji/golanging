@@ -32,6 +32,12 @@ func addNode(root *tree, value int) {
   }
 }
 
+func addNodesFromSlice(root *tree, values []int) {
+  for _, v := range values {
+    addNode(root, v) 
+  }
+}
+
 func inOrder(root *tree) {
   if root.left != nil {
     inOrder(root.left)
@@ -53,5 +59,14 @@ func main() {
   addNode(root, 13)
   addNode(root, 7)
 
+  fmt.Println("Tree one")
   inOrder(root)
+  
+  root2 := &tree{5, nil, nil}
+
+  nodesToAdd := []int{10, -2, 17, 22, 0, 5, 100, -11, -313}
+  addNodesFromSlice(root2, nodesToAdd)
+
+  fmt.Println("\nTree two")
+  inOrder(root2)
 }
