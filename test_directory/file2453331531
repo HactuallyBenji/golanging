@@ -1,0 +1,4 @@
+Hello!
+This file will be deleted once the program is done executing.
+The advantage of using temp files is that they don't pollute the file system.
+Don't use temp files to persist data because they will be deleted by the OS at some point.
