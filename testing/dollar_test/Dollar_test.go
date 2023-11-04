@@ -23,3 +23,11 @@ func TestFormatAmount3(t *testing.T) {
       t.Errorf("FormatAmount(5.10) = %s; Should be USD 5.10", ans)
    }
 }
+
+func TestSubtractFormatAmount(t *testing.T) {
+   ans := SubtractFormatAmount(4.00, 2.00)
+   if ans != "USD 2.00" {
+
+      t.Errorf("FormatAmount(4.00, 2.00) = %s; Should be USD 2.00", ans)
+   }
+}
