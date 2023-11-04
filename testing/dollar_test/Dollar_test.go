@@ -38,3 +38,10 @@ func TestSubtractFormatAmount2(t *testing.T) {
       t.Errorf("FormatAmount(3.00,1.12) = %s; Should be USD 1.88", ans) // we use t to record the testing error.
    }
 }
+
+func TestSubtractFormatAmount3(t *testing.T) {
+   ans := SubtractFormatAmount(1.00, 1.12)
+   if ans != "Impossible operation" {
+      t.Errorf("FormatAmount(1.00, 1.12) cannot be performed")
+   }
+}
