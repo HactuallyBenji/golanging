@@ -24,6 +24,13 @@ func TestFormatAmount3(t *testing.T) {
    }
 }
 
+func TestFormatAmount4(t *testing.T) {
+   ans := FormatAmount(-5.10)
+   if ans != "Impossible operation" {
+      t.Errorf("FormatAmount(-5.10) cannot be performed")
+   }
+}
+
 func TestSubtractFormatAmount(t *testing.T) {
    ans := SubtractFormatAmount(4.00, 2.00)
    if ans != "USD 2.00" {
@@ -45,3 +52,18 @@ func TestSubtractFormatAmount3(t *testing.T) {
       t.Errorf("FormatAmount(1.00, 1.12) cannot be performed")
    }
 }
+
+func TestSubtractFormatAmount4(t *testing.T) {
+   ans := SubtractFormatAmount(-1.00, -1.12)
+   if ans != "Impossible operation" {
+      t.Errorf("FormatAmount(-1.00, -1.12) cannot be performed") 
+   }
+}
+
+func TestSubtractFormatAmount5(t *testing.T) {
+   ans := SubtractFormatAmount(1.00,-1.12)
+   if ans != "Impossible operation" {
+      t.Errorf("FormatAmount(1.00, -1.12) cannot be performed") 
+   }
+}
+
