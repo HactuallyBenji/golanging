@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func FormatAmount(a float64) string {
-  return "USD 2.00"
+  return "USD " + fmt.Sprintf("%.2f", a)
 }
 
 func main() {
